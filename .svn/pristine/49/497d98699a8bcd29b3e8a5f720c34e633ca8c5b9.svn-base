@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CourseSelectionAllBranches" preserve-order="true">
+
+		
+	<test name="TC_Course_Selection_02-Academic course selection for a branch after	selecting courses in slots">
+		<parameter name="courseDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				
+				<methods>
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+					<include name="course_Selection_Details" />
+					<include name="click_Search" />
+					<include name="fill_All_Courses" />
+					<include name="get_Submit_button" />
+					<include name="validate_Submit_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+
+</suite> 
+

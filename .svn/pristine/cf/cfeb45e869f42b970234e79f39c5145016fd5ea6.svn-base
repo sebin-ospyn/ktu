@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AddTimetable" preserve-order="true">
+
+<test name="TC_Timetable_01-Getting the slot details">
+		 <classes>
+			<class name="com.ospyn.ktu.test.AddTimetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_View" />
+					<include name="click_registrationAllowedCourses" />
+					<include name="select_EventName" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Timetable_02-Creating a new Timetable">
+		<classes>
+			<class name="com.ospyn.ktu.test.AddTimetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_Add_Button" />
+					<include name="exam_Timetable_Details" />
+					<include name="click_Save" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test
+		name="TC_Timetable_03-Validating Saved Timetable by viewing the timetable">
+		<classes>
+			<class name="com.ospyn.ktu.test.AddTimetable">
+				<methods>
+					<include name="click_View_TimeTable" />
+					<include name="validate_Saved_Timetable" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="TC_Timetable_04-Edit saved timetable ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AddTimetable">
+				<methods>
+					<include name="click_Back" />
+					<include name="click_Edit_Button" />
+					<!--<include name="edit_Timetable" />-->
+					<include name="click_Save" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Timetable_05- Generate Saved Timetable ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AddTimetable">
+					<methods>
+					<include name="click_Edit_Button" />
+					<include name="click_Generate" />
+					<include name="click_Approve" />
+					</methods>
+			</class>
+		</classes>
+	</test>
+<test name="Log Out-logout university">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

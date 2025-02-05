@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HFCourseSelection" preserve-order="true">
+
+	<test name="Login-As College">
+
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test
+		name="TC_Course_Selection_01-Academic course selection for a branch after selecting courses in slots">
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+
+				<methods>
+
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+					<include name="course_Selection_Details_RequestType" />
+					<include name="click_Search" />
+					<include name="choose_Course" />
+					<include name="course_Slots" />
+					<include name="click_Save" />
+					<include name="validate_Saved_Success" />
+
+				</methods>
+
+			</class>
+		</classes>
+	</test>
+
+
+
+
+	<test
+		name="TC_Course_Selection_02-Submitting branches to the university after
+	choosing courses for all the branches">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="search_Page_Displayed" />
+					<include name="fill_All_Courses" />
+					<include name="get_Submit_button" />
+					<include name="validate_Submit_Success" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Log Out-  ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<!--<include name="next_College" />-->
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite> 
+

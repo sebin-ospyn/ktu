@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+  	<test name="Mark Correction-Loading KTU Home Page">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<include name="ktu_Page_Loaded" />
+				
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Mark Correction-Performing the login as student before Performing mark correction">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Login_as_Student"/>
+				<include name='Perform_Student_Actions1'/>
+				<include name='Log_Out'/>
+			</methods>
+		</class>
+	</classes>
+</test>	
+	
+<test name="Mark Correction-Performing the login as adexam">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Login_as_AdExam" />
+				<include name="Perform_Action" />
+				<include name="Log_Out"/>
+			</methods>
+		</class>
+	</classes>
+</test>	
+
+<test name="Mark Correction-Performing the login as student after Performing mark correction">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Login_as_Student"/>
+				<include name='Perform_Student_Actions2'/>
+				<include name='Log_Out'/>
+			</methods>
+		</class>	
+	</classes>
+</test>	
+
+</suite> 

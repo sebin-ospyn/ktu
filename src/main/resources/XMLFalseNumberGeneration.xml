@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FalseNumber Generation" preserve-order="true">
+
+<test name="TC_01-Login-As University">
+		<parameter name="username" value="adexam"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+<test name="TC_False_number_generation_01-User click on submodule generate false number and navigate to generate answer cover zip page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+				<methods>
+					<include name="click_Valuation_Module" />
+				    <include name="user_Click_Generate_Falsenumber_Menu" />
+					<include name="user_Validating_Falsenumber_Listing_Page" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="TC_False_number_generation_02-User searching falseNumber details">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+				<methods>
+					<include name="User_passing_year_program" />
+					<include name="User_checking_whether_the_camp_is_present" />
+					 <!--<include name="User_click_edit_button" />
+					<include name="user_configure_false_numbers" />
+					<include name="user_click_courseselection_button" />
+					<include name="user_approve_falsenumber_generate_request" />-->
+ 				</methods>
+			</class>
+		</classes>
+</test>
+
+
+
+
+<!--<test name="TC_False_number_generation_02- User configure and generate falsenumber ">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+				<methods>
+					<include name="user_Click_Add_Button" />
+					<include name="user_Generate_Falsenumber" />
+					<include name="user_configure_false_numbers" />
+					<include name="user__Validating_Falsenumber" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="TC_False_number_generation_03- User validating each field which is listing in falsenumber generating page ">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+				<methods>
+					<include name="user_validating_event_type" />
+					<include name="user_validating_exam_specific_event" />
+					<include name="user_validating_flase_number_from_field" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="TC_False_number_generation_04- User select the Courses for Which False Number to be Generated ">
+ 	<classes>
+		<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+			<methods>
+				<include name="user_click_courseselection_button" />
+				<include name="user_approve_falsenumber_generate_request" />
+				<include name="user_validating_status" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_False_number_generation_05- User generating barcode ">
+ 	<classes>
+		<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+			<methods>
+				<include name="user_generating_barcode" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_False_number_generation_06- User validating whether the bar code is generated or not ">
+ 	<classes>
+		<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+			<methods>
+				<include name="user_validating_barcode" />
+			</methods>
+		</class>
+	</classes>
+</test> 
+
+<test name="TC_False_number_generation_07- User generating Zip">
+ 	<classes>
+		<class name="com.ospyn.ktu.test.Falsenumbergeneration">
+			<methods>
+				<include name="user_generating_zip" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="Logout-From College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+ 					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+</suite>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AttendanceInternal" preserve-order="true">
+
+<test name="Login-As College">
+		<parameter name="username" value="alameenkulapully	"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Attendance_Internal01-User fetch faculty id and course details">
+		<parameter name="attendanceinternaldetails" value="2022 - 2023,#B.Tech,#Full Time,#S4,#Pursuing Students,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_student_attandance_internal" />
+					<include name="user_course_code_Faculty_Id" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+<test name="TC_Attendance_Internal02-Identify the advisor name">
+		<parameter name="staffadvisordetails" value="2021 - 2022,#B.Tech,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="user_click_the_Academics_Auditing_Tab" />
+					<include name="user_select_staff_Advisor" />
+					<include name="logout_from_user" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+ 
+<test name="Login-As University">
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Attendance_Internal03-User fetch the course type from course code">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="User_click_the_Academics_Tab" />
+					<include name="user_clicks_Course_menu" />
+					<include name="user_get_the_course_type_from_course_code" />
+					</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="TC_Attendance_Internal04-User fetch the Configuration details from evaluation plan">
+		<parameter name="Evaluationplan" value="B.Tech Full Time 2019 Scheme" />
+       <classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Evaluation_plan_side_menu" />
+					<include name="user_Enters_The_Scheme" />
+					<include name="user_Get_The_Configuration_Details_From_Evaluation_Plan"/>
+					<include name="logout_from_user" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		 
+
+	<test name="TC_Attendance_Internal05- ">
+	
+       <classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+	<include name="Attendance_Internal" />
+	
+				</methods>
+				</class>
+				</classes>
+				</test>
+	
+
+<!--<test name="Login-As Faculty">
+		
+		<parameter name="username" value="KTU-F8084"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+<test name="TC_Attendance_Internal05-Faculty enters attendance internal">
+	   <parameter name="FacultyAssignedCourses" value="2022 - 2023,#B.Tech,#Full Time,#Even,#Pursuing Students" />
+       <classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="User_click_on_Academics" />
+					<include name="User_clicks_on_assignedcourses" />
+					<include name="User_fetching_faculty_assignedcourses" />
+					<include name="logout_from_user" />
+					</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+ <test name="TC_Attendance_Internal06-Log in as staff advisor">
+	   <parameter name="advisorBatches" value="2022 - 2023,#B.Tech,#Full Time,#S4,#Pursuing Students,#Regular" />
+       <classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+					<include name="User_login_as_Staff_Advisor" />
+					<include name="click_Login_Button" />
+					<include name="click_Exam_Tab" />
+					<include name="User_clicks_on_advisors_Batches" />
+					<include name="User_filter_advisor_batches_data" />
+					<include name="StaffAdvisor_confirmAttendance" />
+					<include name="logout_from_user" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Login-As College-  ">
+		<parameter name="username" value="alameenkulapully	"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Attendance_Internal06-College submit attendance internal to university">
+	<parameter name="collegeSubmit" value="2022 - 2023,#B.Tech,#Full Time,#S4,#Pursuing Students,#Regular" />
+       <classes>
+			<class name="com.ospyn.ktu.test.AttendanceInternal">
+				<methods>
+ 					<include name="click_Exam_Tab" />
+					<include name="User_click_Student_Attendance_Internals_option" />
+					<include name="College_Submit_the_student_Attendance_and_Internal" />
+					<include name="User_validate_successful_submit_validation" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

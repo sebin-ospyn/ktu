@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CourseMapping" preserve-order="true">
+
+	<test name="Login-As College">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+		
+	</test>
+
+<!-- 
+	<test
+		name="TC_Course_Mapping_01-Course mapping is saved successfully">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="faculty_All_Slots_Save" />
+					<include name="save_Success" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_02-Course mapping is Marked as Complete">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="mark_As_Complete" />
+					<include name="validate_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_03-Export of Course Mapping Details">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="select_Marked_Branch" />
+					<include name="click_Export_Button" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test
+		name="TC_Course_Mapping_04-Partial Submission of Course mapping to the
+	university">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="partial_Submission" />
+					<include name="validate_Partial_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+	<test
+		name="TC_Course_Mapping_01-Submission of Course mapping to the university">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="all_Branches_Faculty" />
+					<include name="validate_All_Branches_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_02-Course Mapping of all the branches is submitted to
+	the university">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S3,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="submit_CourseMapping_All_Branches_To_University" />
+					<include name="validate_All_Branches_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Logout-From College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<!--<include name="next_College" />-->
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- <test
+		name="Login-As University">
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_12-Revoke the Course Mapping submitted to University">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students,JYOTHI ENGINEERING COLLEGE" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="revoke_Courses" />
+					<include name="validate_Revoke_Branch" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="Logout-From College-1">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+<test name="Login-As College-1">
+		<parameter name="username" value="jyothi"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_13-Course mapping is Marked as Completed successfully">
+		<parameter name="mappingDetails"
+			value="2023 - 2024,B.Tech,Full Time,S5,Regular,Pursuing Students" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="submit_Revoked_Branch" />
+					<include name="mark_As_Complete" />
+					<include name="validate_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_14-Full submission of course mapping to the	university">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="partial_Submission" />
+					<include name="validate_All_Branches_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="Log Out-      ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+</suite> 
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SemesterEnrollment" preserve-order="true">
+	
+	<test name="Login-As University user">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<include name="ktu_Page_Loaded" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="Revaluation -Performing the login as University">		
+	<classes>
+		<class name="com.ospyn.ktu.test.Revaluation">
+			<methods>					
+				<include name="Revaluation_Date_Extension" />
+			</methods>
+		</class>
+	</classes>
+</test>		
+
+<test name="Revaluation -Performing the login as student">		
+	<classes>
+		<class name="com.ospyn.ktu.test.Revaluation">
+			<methods>					
+				<include name="Student_Revaluation_Registration" />
+			</methods>
+		</class>
+	</classes>
+</test>	
+	
+<test name="Revaluation -Performing the login as Adexam">		
+	<classes>
+		<class name="com.ospyn.ktu.test.Revaluation">
+			<methods>					
+				<include name="Revaluation_Camp_Creation" />
+			</methods>
+		</class>
+	</classes>
+</test>	
+	
+	
+	<test name="Revaluation packet -Performing the login as Adexam">		
+	<classes>
+		<class name="com.ospyn.ktu.test.Revaluation">
+			<methods>					
+				<include name="Revaluation_Packet_Movement" />
+			</methods>
+		</class>
+	</classes>
+</test>	
+	
+</suite>

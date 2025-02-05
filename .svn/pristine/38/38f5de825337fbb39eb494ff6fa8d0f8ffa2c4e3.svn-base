@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SemesterEnrollment" preserve-order="true">
+
+
+<test name="Login-As University user">
+	<classes>
+		<class name="com.ospyn.ktu.test.Login">
+			<methods>
+				<include name="ktu_Page_Loaded" />
+				
+			</methods>
+		</class>
+	</classes>
+</test>
+	
+	
+<test name="TC_SemesterEnrollment_01-Semester enrollment from college login">		
+	<classes>
+		<class name="com.ospyn.ktu.test.SemesterEnrollment">
+			<methods>					
+				<include name="Login_as_College_Admin" />
+				<include name="click_Student_Module" />
+				<include name="click_Student_Semester_Enrollment" />
+				<include name="Add_Filters_in_the_Semester_Enrollment_Page" />
+				<include name="click_Search_Button" />
+				<include name="click_View_Branches_Button" />
+				<include name="Selecting_View_Branches_Button_for_Semester_Enrollment" />
+				<include name="enrolling_Students" />
+				
+			</methods>
+		</class>
+	</classes>
+</test>	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</suite>

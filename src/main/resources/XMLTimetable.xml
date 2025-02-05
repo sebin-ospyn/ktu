@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Timetable" preserve-order="true" thread-count="5">
+
+	<!--
+
+	<test name="Login-As University">
+	
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+ <test name="TC_Timetable_01-Creating a new Timetable">
+
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_Add_Button" />
+					<include name="exam_Timetable_Details" />
+					<include name="click_Save" />
+				</methods>
+			</class>
+		</classes>
+		</test>
+
+	<test name="TC_Timetable_02-Creating a new Timetable">
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="exam_Timetable_Details" />
+					<include name="click_Save" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test
+		name="TC_Timetable_03-Validating Saved Timetable by viewing the timetable">
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+
+					<include name="click_View_TimeTable" />
+					<include name="validate_Saved_Timetable" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="TC_Timetable_04-Edit saved timetable ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Back" />
+					<include name="click_Edit_Button" />
+					<include name="edit_Timetable" />
+					<include name="click_Save" />
+				</methods>
+
+					
+			</class>
+		</classes>
+	</test>
+
+	<test name="TC_Timetable_05- Generate Saved Timetable ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+					<methods>
+					<include name="click_Edit_Button" />
+				
+					<include name="click_Generate" />
+					<include name="click_Approve" />
+
+				</methods>
+
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="TC_Timetable_06-Revert timetable ">
+	
+		<classes>
+		
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="select_Revert" />
+			</methods>
+		</class>
+	</classes>
+		</test>
+		
+		
+		<test name="TC_Timetable_07-Check whether the time table can be generated if
+	the date changed and time not changed">
+		
+		<classes>
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="click_EventName" />
+				<include name="click_Generate" />		
+				<include name="click_Approve" />
+				
+			</methods>
+			
+		</class>
+	</classes>
+		</test>
+		
+		
+		<test name="TC_Timetable-Revert timetable  ">
+	
+		<classes>
+		
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="select_Revert" />
+			</methods>
+		</class>
+	</classes>
+		</test>
+		
+		
+		<test name="TC_Timetable_07-Error Case of Saving timetable with course in
+	slot">
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+	
+		<parameter name="eventName" value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-"
+	/>
+		
+		<classes>
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="click_EventName" />
+				<include name="courses_In_Slots" />
+				<include name="click_Save" />
+				<include name="click_EventName1" />
+				<include name="validate_Save_Error" />
+				
+			</methods>
+		</class>
+	</classes>
+		</test>
+		
+		<test name="TC_Timetable_08-Check whether the university user is able to
+	generate timetable with one course and 
+		            one blank in same slot with giving date and time to both slot">
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+	
+		<parameter name="eventName" value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-"
+	/>
+		
+		<classes>
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="click_EventName" />
+				<include name="slots_Course_Blank" />
+				<include name="click_Generate" />		
+				<include name="click_Approve" />
+				
+			</methods>
+			
+		</class>
+	</classes>
+		</test>
+	<test name="TC_Timetable-Revert timetable     ">
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="select_Revert" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Timetable_09-Check whether the university user is able to save one
+	course in two same slot with two dates">
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="same_Course_slots" />
+					<include name="click_Generate" />
+					<include name="validate_Duplicate_Course" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test
+		name="Fetching data regarding registration allowed courses- ">
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+				
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_View_Timetable" />
+					<include name="click_Courses" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Timetable_10-Check whether university is able to generate  timetable
+	for common course with same date 
+		      and different time">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S4 (R,S) Exam June
+	2023 (2019 scheme)" />
+
+		<parameter name="eventName"
+			value="B.Tech S4 (R,S) Exam June 2023 (2019 scheme)" />
+			<parameter name="course"
+			value="CST206-OPERATING SYSTEMS" />
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="common_Course_Slots" />
+				    <include name="click_Generate" />
+				    <include name="click_Approve" />	
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Timetable-Revert timetable   ">
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="select_Revert" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Timetable_11-Copy timetable to another Event">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023 (2019 scheme)" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="copy_Timetable" />
+					<include name="validate_Copy" />
+							
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test
+		name="TC_Timetable_12-Error when university user generate timetable when slot
+	is marked as scheduled by college ">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023 (2019 scheme)" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="scheduled_By_College_SlotA" />
+				    <include name="click_Generate" />
+				  <include name="validate_Error_Schedule_By_College" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Timetable_13-Success when university user generate timetable when slot
+	is marked as scheduled by college ">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023 (2019 scheme)" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					
+					<include name="click_Back" />
+					<include name="click_EventName" />
+					<include name="scheduled_By_College_SlotS" />
+				    <include name="click_Generate" />
+				    <include name="click_Approve" />
+				    
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Timetable_14-Check whether university is able to generate timetable ,
+	if B slot have 3 courses and timetable is given in a way that all 
+							 three courses are in different slots of B with same date and time ">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#End Semester,#B.Tech S2 (R,S) Exam June
+	2023" />
+
+		<parameter name="eventName"
+			value="B.Tech S2 (R) Exam June 2023 (2019 scheme)-" />
+
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+
+					
+					
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="courses_Different_Slots" />
+					<include name="click_Generate" />
+				    <include name="click_Approve" />
+				   
+				  
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Timetable_15-Check whether university is able to generate time table
+	for S1 S2 exam without giving semester 
+		      in timetable ">
+		
+		<parameter name="examDetails"
+			value="2022 - 2023,#B.Tech,#Full Time,#Supplementary,#S1,S2 Exam test 2019
+	scheme" />
+
+		<parameter name="eventName"
+			value="s1s2 test 2019 scheme oct" />
+
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="S1_S2_Combined" />
+					<include name="click_Generate" />
+				    <include name="click_Approve" />
+				   
+				</methods>
+				
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Timetable_16-Check whether proper validation is shown when
+	registered course of a college is not 
+		            mentioned in the exam timetable slot">
+		
+		<classes>
+		
+		<class name="com.ospyn.ktu.test.Timetable">
+		
+			<methods>
+			
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="click_EventName" />
+				
+				<include name="enter_Course_A_Slot" />
+				<include name="click_Generate" />	
+				<include name="validate_Save_Error" />
+					
+				
+			</methods>
+			
+		</class>
+	</classes>
+		</test>
+		
+	
+	<test name="TC_Timetable_17-Check whether university is able to save timetable
+	if in one slot of A there is semester,course,
+	           date and time while in other slot of A no semester but course date and time are
+	same as that of semester slot">
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+			
+			<parameter name="id" value="1"></parameter>
+				<methods>
+				
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="edit_Timetable_TwoSlots" />
+					<include name="click_Save" />	
+					<include name="validate_Duplicate_Course" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Timetable_18-Check whether university is able to generate
+	timetable if in one slot of A there is semester ,
+	           course,date and time while in other slot of A no semester but course date and
+	time are same as that of 
+	           semester slot">
+	
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				
+				<methods>
+				
+				<include name="click_EventName" />
+				<include name="click_Generate" />
+				  <include name="click_Approve" />
+				   
+					
+				    </methods>
+				    </class>
+				    </classes>
+	
+	</test>
+	
+	
+ <test name="TC_Timetable_19-Check whether university is able to save timetable
+	if in one slot of A there is semester and 
+	           course date and time while in other slot of A no semester and course but with
+	date and time">
+		
+		<parameter name="id" value="2"></parameter>
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+				
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="edit_Timetable_TwoSlots" />
+					<include name="click_Save" />	
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="TC_Timetable_20-Check whether university is able to generate
+	timetable if in one slot of A there is semester,
+	            course,date and time while in other slot of A no semester and course but with
+	date and time">
+	<parameter name="id" value="2"></parameter>
+	
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				
+				<methods>
+					
+					
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="edit_Timetable_TwoSlots" />
+					<include name="click_Generate" />
+					
+				    </methods>
+				    </class>
+				    </classes>
+	
+	</test>
+
+
+	
+	<test name="TC_Timetable_21-Check whether university is able to save timetable
+	, if  A slot have 3 courses and 
+	           timetable is given in a way that all three courses are in different slots of A
+	with same date and time ">
+		
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.Timetable">
+				
+				<methods>
+				
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="edit_Timetable_Three_Slots" />
+					<include name="click_Save" />	
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		
+			<test name="TC_Timetable_22-Check whether university is able to generate
+	timetable , if  A slot have 3 courses and 
+	           timetable is given in a way that all three courses are in different slots of A
+	with same date and time ">
+		
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.Timetable">
+				
+				<methods>
+				
+						<include name="click_EventName" />
+				<include name="click_Generate" />
+				  <include name="click_Approve" />
+				   
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="Logout-From University">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+	
+	<test name="Login-As College">
+	
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_03-The user navigates to the Course
+	Listing page to enter absentee information">
+		<parameter name="examDetails" value="2023 - 2024,B.Tech,Full Time,End Semester,B.Tech S3 (R) Exam Nov 2023 Test (2019 scheme)" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+		<test name="TC_Absentee_Malpractice_Bulk_04-The user entering absentee against
+	particular courses">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+				
+					<include name="clicking_Absentee"/>
+					<include name="entering_Absentee_Data" />
+					<include name="click_Save_Button" />
+					
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="Logout-From College-1">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		<test name="Login-As University">
+	
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Timetable_06-Revert timetable">
+	
+		<classes>
+		
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+				<include name="click_Exam_Tab" />
+				<include name="click_ExamDefinition" />
+				<include name="exam_Selection" />
+				<include name="click_Search_Button" />
+				<include name="click_List_Timetable" />
+				<include name="select_Revert" />
+			</methods>
+		</class>
+	</classes>
+		</test>	
+		
+
+<test name="TC_Timetable-Generate Timetable">
+	
+		<classes>
+		
+		<class name="com.ospyn.ktu.test.Timetable">
+			<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+				    <include name="click_Generate" />
+				    <include name="click_Approve" />	
+				    </methods>
+				    </class>
+				    </classes>
+				    </test>
+				    
+				    <test name="Logout-From University ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login-As College  ">
+
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Absentee_Malpractice_Bulk_03-The user navigates to the Course Listing page ">
+		<parameter name="examDetails"
+			value="2023 - 2024,B.Tech,Full Time,End Semester,B.Tech S3 (R) Exam Nov 2023 Test (2019 scheme)" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test
+		name="TC_Absentee_Malpractice_Bulk_04-The user deletes absentee against against particular courses">
+		<classes>
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+
+					<include name="clicking_Absentee" />
+					<include name="clicking_Absentee_Delete" />
+					<include name="click_Save_Button" />
+
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="Logout-From College    ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login-As University ">
+
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="TC_Timetable-Revert timetable ">
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="select_Revert" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="TC_Timetable-Generate Timetable ">
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="click_Generate" />
+					<include name="click_Approve" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="TC_Timetable-Revert timetable        ">
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="select_Revert" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Timetable-Generate Timetable  ">
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.Timetable">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_ExamDefinition" />
+					<include name="exam_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_List_Timetable" />
+					<include name="click_EventName" />
+					<include name="edit_Timetable" />
+					<include name="click_Generate" />
+					<include name="click_Approve" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="Logout-From University  ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite>

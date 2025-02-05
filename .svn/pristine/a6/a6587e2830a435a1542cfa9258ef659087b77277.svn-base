@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="FirstLevelValuation" preserve-order="true">
+
+	<test name="Login-As University user">
+		<parameter name="username" value="ADEXAM"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />s
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="TC_FirstLevelValuation_01-Packet preparation from camp side">		
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+					<include name="click_Valuation_Tab" />
+					<include name="click_prepare_packets"/>
+					<include name="Packet_preparation_from_camp"/>
+					<include name="click_create_or_view_packets"/>
+					<include name="click_save_or_verify"/>												
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		
+	<test name="TC_FirstLevelValuation_02-Post faculty member">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>
+					<include name="click_Valuation_Tab" />				
+					<include name="click_post_faculty_members_tab" />
+					<include name="posting_faculty_members_page" />
+					<include name="click_search_button_in_the_post_faculty_member_page" />
+					<include name="post_faculty" />
+					<include name="click_post_faculty_button" />											
+				</methods>
+			</class>
+		</classes>
+	</test>	
+		
+		
+	<test name="TC_FirstLevelValuation_03-Packet distribution">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+					<include name="click_distribute_packets" />	
+					<include name="click_add_button" />	
+					<include name="distribute_packets" />				
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="TC_FirstLevelValuation_04-storing false number">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>				
+					
+					<include name="click_view_generated_false_number" />
+					<include name="storing_false_numbers" />
+					<include name="logout" />			
+				</methods>
+			</class>			
+		</classes>
+	</test>
+
+
+	
+	<test name="TC_FirstLevelValuation_05-First level mark entry">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>
+					
+					<include name="Login_as_faculty" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_assigned_courses" />
+					<include name="add_filters_in_assigned_courses_page" />
+					<include name="click_search_button" />
+					<include name="selecting_assigned_packets" />
+					<include name="enter_marks" />
+					<include name="logout" />						
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	<test name="TC_FirstLevelValuation_06-Recieving packets">
+		<classes>			
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>
+					<include name="Login_as_adexam" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_distribute_packets" />	
+					<include name="filters_in_distribute_packets_page" />
+					<include name="Receiving_packets" />											
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="TC_FirstLevelValuation_07-Revoking and cancelling the returned packets">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>
+					<include name="Revoking_returned_packets" />	
+					<include name="Packets_send_back_to_the_examiner" />	
+					<include name="Cancelling_distributed_packets" />										
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_FirstLevelValuation_08-Check whether proper validation is displayed while save mark entry page with blank details(Data preparation)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>
+					<include name="click_Valuation_Tab" />
+					<include name="click_prepare_packets"/>
+					<include name="Packet_preparation_from_camp"/>
+					<include name="click_create_or_view_packets"/>
+					<include name="click_save_or_verify"/>	
+					<include name="click_Valuation_Tab" />				
+					<include name="click_post_faculty_members_tab" />
+					<include name="posting_faculty_members_page" />
+					<include name="click_search_button_in_the_post_faculty_member_page" />
+					<include name="post_faculty" />
+					<include name="click_post_faculty_button" />	
+					<include name="click_distribute_packets" />	
+					<include name="click_add_button" />	
+					<include name="distribute_packets" />
+					<include name="logout" />										
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		<test name="TC_FirstLevelValuation_08-Check whether proper validation is displayed while save mark entry page with blank details(Testing)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+					<include name="Login_as_faculty" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_assigned_courses" />
+					<include name="add_filters_in_assigned_courses_page" />	
+					<include name="selecting_assigned_packets" />
+					<include name="save_mark_entry_page_with_blank_details" />	
+												
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_FirstLevelValuation_08-Check whether proper validation is displayed while save mark entry page with blank details(Clearing)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+				
+					<include name="logout" />
+					<include name="Login_as_adexam" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_distribute_packets" />	
+					<include name="filters_in_distribute_packets_page" />
+					<include name="Cancelling_distributed_packets" />								
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+		<test name="TC_FirstLevelValuation_09-Check whether proper validation is displayed while save the mark entry page without entering marks(Data preparation)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+					<include name="click_Valuation_Tab" />
+					<include name="click_prepare_packets"/>
+					<include name="Packet_preparation_from_camp"/>
+					<include name="click_create_or_view_packets"/>
+					<include name="click_save_or_verify"/>	
+					<include name="click_Valuation_Tab" />				
+					<include name="click_post_faculty_members_tab" />
+					<include name="posting_faculty_members_page" />
+					<include name="click_search_button_in_the_post_faculty_member_page" />
+					<include name="post_faculty" />
+					<include name="click_post_faculty_button" />	
+					<include name="click_distribute_packets" />	
+					<include name="click_add_button" />	
+					<include name="distribute_packets" />
+					<include name="logout" />									
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+		<test name="TC_FirstLevelValuation_09-Check whether proper validation is displayed while save the mark entry page without entering marks(Testing)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+					<include name="Login_as_faculty" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_assigned_courses" />
+					<include name="add_filters_in_assigned_courses_page" />	
+					<include name="selecting_assigned_packets" />
+					<include name="save_mark_entry_page_without_enter_mark" />	
+												
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_FirstLevelValuation_09-Check whether proper validation is displayed while save the mark entry page without entering marks(clearing)">
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstLevelValuation">
+				<methods>					
+				
+					<include name="logout" />
+					<include name="Login_as_adexam" />	
+					<include name="click_Valuation_Tab" />
+					<include name="click_distribute_packets" />	
+					<include name="filters_in_distribute_packets_page" />
+					<include name="Cancelling_distributed_packets" />								
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</suite> 

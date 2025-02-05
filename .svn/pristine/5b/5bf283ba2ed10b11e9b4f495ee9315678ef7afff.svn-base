@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CourseSelection" preserve-order="true">
+
+		<test name="Login-As College">
+		<parameter name="username" value="christ"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				
+				<methods>
+					
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Selection_01-Error message of course selection for the
+	semester not opened yet">
+			<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				
+				<methods>
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+					<include name="course_Selection_Details" />
+					<include name="click_Search" />
+					<include name="part_Time_error" />
+				</methods>
+				
+			</class>
+		</classes>
+	</test>
+
+	<!--<test name="TC_Course_Selection_02-Error message when academic course selection
+	is done for a branch without courses selected in slots">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+				    <include name="course_Selection_Details_RequestType" />
+					<include name="click_Search" />
+					<include name="choose_Course" />
+					<include name="click_Save" />
+					<include name="display_Error_Message" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_03-Academic course selection for a branch after
+	selecting courses in slots">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="course_Slots" />
+					<include name="click_Save" />
+					<include name="validate_Saved_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_04-Exporting branches listed for a college as
+	Excel based on the search criteria">
+	
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+
+				<methods>
+					
+					<include name="search_Page_Displayed" />
+					<include name="export_Courses_Click" />
+					<include name="validate_Excel_File" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_05-Error message while submitting branches to
+	the university without choosing courses for all the branches">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_Submit_Button" />
+					<include name="validate_Submit_Error_Message" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_06-Submitting branches to the university after
+	choosing courses for all the branches">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="fill_All_Courses" />
+					<include name="get_Submit_button" />
+					<include name="validate_Submit_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_07-Error message when curriculum is not found
+	for a branch">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="course_Selection_Details" />
+					<include name="click_Search" />
+					<include name="choose_Course" />
+					<include name="no_Curriculum_Found" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_08-Error message when last date for course
+	selection is over">
+			<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="search_Page_Displayed" />
+					<include name="course_Selection_Details_RequestType" />
+					<include name="click_Search" />
+					<include name="get_LastDate_Error" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Selection_09-Adding courses for a branch in college by
+	College">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+					<include name="course_Selection_Details_RequestType" />
+					<include name="click_Search" />
+					<include name="view_Curriculum" />
+					<include name="add_Course" />
+					<include name="fill_Slots" />
+					<include name="get_Save_Button" />
+					<include name="validate_Saved_Course" />
+						
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Log Out-  ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login-As University">
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Selection_10-Adding courses for a branch in college as
+	university">
+			<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_UniversityTab" />
+					<include name="click_UniversityInbox" />
+					<include name="enter_Details_Course" />
+					<include name="click_Search" />
+					<include name="click_College" />
+					<include name="view_Course" />
+					<include name="add_Course" />
+					<include name="fill_Slots" />
+					<include name="get_Save_Button" />
+					<include name="validate_Saved_Course" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Log Out-   -  - ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login-As University (ITOperations)">
+
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+			
+				<methods>
+					
+					<include name="ktu_Page_Loaded"></include>
+					<include name="loginUser"></include>
+					<include name="click_Login_Button"></include>
+					<include name="validate_Login_Success"></include>
+				
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Selection_11-Changing courses for a branch in a
+	College as University">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_UniversityTab" />
+					<include name="click_UniversityInbox" />
+					<include name="enter_Details_Course" />
+					<include name="click_Search" />
+					<include name="click_College" />
+					<include name="view_Course" />
+					<include name="change_Course" />
+					<include name="enter_slot_Scheme" />
+					<include name="remove_Course" />
+					<include name="click_YesButton" />
+					<include name="click_Save_Change" />
+					<include name="click_CancelButton" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Selection_12-Error while revoking a branch as students
+	already registered for the branch">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="move_Back" />
+					<include name="click_UniversityTab" />
+					<include name="click_UniversityInbox" />
+					<include name="enter_Details_Course" />
+					<include name="click_Search" />
+					<include name="click_College" />
+					<include name="select_CheckBox" />
+					<include name="get_Revoke_Button" />
+					<include name="get_Confirm" />
+					<include name="get_errorMsg" />
+					<include name="click_No" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test
+		name="TC_Course_Selection_13-Revoking a branch for a college as University">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				<methods>
+					<include name="click_UniversityTab" />
+					<include name="click_UniversityInbox" />
+					<include name="enter_Details_Course" />
+					<include name="click_Search" />
+					<include name="click_College" />
+					<include name="select_BranchName" />
+					<include name="get_Revoke_Button" />
+					<include name="get_Confirm" />
+					<include name="revoke_Success" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Log Out-   -   ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Login-As College1">
+		<parameter name="username" value="jyothi"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Selection_14-Submitting revoked branches to university after 
+		       choosing the new course for the revoked branch">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseSelection">
+				
+				<methods>
+					
+					<include name="click_AcademicsTab" />
+					<include name="click_Course_Details" />
+					<include name="course_Selection_Details_RequestType" />
+					<include name="click_Search" />
+					<include name="fill_All_CoursesRevoked" />
+					<include name="get_Submit_button" />
+					<include name="validate_Submit_Success" />
+					<include name="click_Verify" />
+
+				</methods>
+			</class>
+		</classes>
+		
+	</test>-->
+
+
+	<test name="Log Out-      ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 

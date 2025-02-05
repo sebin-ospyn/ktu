@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HFCourseSelection" preserve-order="true">
+
+		<test name="Login-As College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+	<test name="TC_HallTicket_01-HallTicket Generation">
+		 	
+		<classes>
+			<class name="com.ospyn.ktu.test.HallTicketGeneration">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exam_HallTicket" />
+					<include name="enter_examDetails" />
+					<include name="user_get_branchdetails" />
+					<include name="User_Enter_Into_Hallticket_Page" />
+
+
+					<!--<include name="user_clicks_View_HallTicket_Button" />
+					<include name="enter_hallTicket_Details" />
+					<include name="view_TimeTable" />
+					<include name="enter_examDetails_2" />
+					include name="generate_HallTicket" />-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="Logout-From College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				    <!--<include name="next_College" />-->
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite> 
+

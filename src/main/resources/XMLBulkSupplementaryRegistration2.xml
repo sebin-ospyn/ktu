@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CourseSelection" preserve-order="true">
+
+  	   <test name="Login-As University">
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Supply bulk registration-filtering the report and getting supplementary students">
+	<parameter name="studentDetails" value="2019 - 2020,B.Tech,Full Time,B.Tech Regulations 2019,B.Tech Full Time 2019 Scheme,S5,met,btt303,Fail grade,Registered" />
+		<classes>
+			<class name="com.ospyn.ktu.test.BulkSupplementaryRegistration">
+			    <methods>
+					<include name="click_ineligibleFailedReport" />
+					<include name="search_ineligibleFailedReport" />
+					<include name="store_Student_Details" />
+					<include name="userLogout" />
+					<include name="student_Registration" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
+
+	<test name="Login-As College">
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Supply registration_01-branch wise submission by college">
+	<parameter name="examDetails" value="2022 - 2023,Full Time,Supplementary,Btech s5 (S) test" />
+		<classes>
+			<class name="com.ospyn.ktu.test.BulkSupplementaryRegistration">
+				<methods>
+					<include name="college_homepage_ktu_loaded" />
+					<include name="collegeExam_click" />
+					<include name="click_Exams_searchSupplementaryExam" />
+		  			<include name="collegeRegisterSubmissionButton_click" />
+				<!--	<include name="brancwiseSubmission" />
+					<include name="validateResult" />     -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+</suite>

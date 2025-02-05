@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AbsMalRegression" preserve-order="true">
+
+<test name="Login-As College">
+
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+<test name="TC_Absentee_Malpractice_01-Fetching  the course code from absentee malpractice listing page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+					<include name="course_Code" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+<!--<test name="TC_Absentee_Malpractice_02-User get the eligible student details">
+		<parameter name="eligibleStudentDetails" value="2023 - 2024,#Full Time,#B.Tech,#B.Tech S3 (R) Exam Nov 2023 Test (2019 scheme),#Eligible" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exam_Eligibility" />
+					<include name="fetch_EligibleStudent_id" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+<!--<test name="TC_Absentee_Malpractice_Bulk_03-User get the Ineligible student details">
+		<parameter name="eligibleStudentDetails" value="2023 - 2024,#Full Time,#B.Tech,#B.Tech S3 (R) Exam Nov 2023 Test (2019 scheme),#Not Eligible" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Eligibility" />
+				 	<include name="fetch_InEligibleStudent_id" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+<test name="TC_Absentee_Malpractice_04-User navigating to course listing page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_05-User validating error message  ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+			<include name="user_Checking_Validation_in_absentee_page" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_06-User asserting a Note shown in absentee entering page ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+			<include name="User_asserting_a_note_in_absentee_page" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_07-User verifying Course details and exam time listed which is in absentee entering page  ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+				<include name="User_asserting_course_and_examdate_absentee_page" />
+				</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_08-User get the eligible student details">
+ 			<parameter name="id" value="1" />
+
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exam_Eligibility" />
+					<include name="User_fetch_eligible_student" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+<test name="TC_Absentee_Malpractice_09-User get the Noteligible student details">
+ 		<parameter name="id" value="2" />
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exam_Eligibility" />
+					<include name="User_fetch_Ineligible_student" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_10-User navigating to  course   listing page ">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_11-User Verifying all eligible students are listed in absentee entering page ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+				<include name="User_entering_All_students_as_absentee_and_storing" />
+				<include name="User_asserting_all_eligible_students_are_present_in_field" />
+			</methods>
+		</class>
+	</classes>
+   </test>
+
+<test name="TC_Absentee_Malpractice_12-Error when user marking No absentee checkbox and submit page if Students are already added in absentees list">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+				<include name="User_click_on_NoAbsentee_checkBox_and_Submit" />
+				<include name="User_validating_error_message_showed" />
+			</methods>
+		</class>
+	</classes>
+   </test>
+
+<test name="TC_Absentee_Malpractice_Bulk_13-User verifying that Ineligible students are not lisiting in absentee entering page">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+			<include name="user_Entering_Ineligible_Students_As_Absentee" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_Bulk_14-Error when entering Ineligible students as absentee">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+			<include name="user_adding_ineEligible_student_in_absnetee_field" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_Bulk_15-Check whether that user is able to delete saved absentees">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+			<include name="user_Deleting_Absentee_Entered_Students" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_16-User verifying that course details and exam time which is listed in course listing page are equal to date and time showed in malpractice entering page">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_click_malpracticeButton_and_verifying_data" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_17- User validate the error throwed while trying to sumbit empty set of malpractice data">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_submit_empty_malpracticeData_and_validate_error" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_18- User validate each mandatory fields in malpractice form page  ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_leaves_mandatory_fieldEmpty_and_validate_errorMessage" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_19- Check whether the user is able to add ineligible student">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_adding_ineligible_student_in_malpracticeform" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_20-  Error when an absentee marked student add in malpractice entering form">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_adding_an_absent_student_in_malpracticeform" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_21- User checking that it is able to attach only  proper document type,need to throw validation for all other documents  ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_Checking_validation_for_invalid_attachments" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_22-  User adding an eligible student in malpractice form ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_adding_an_eligible_student_in_malpracticeform" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_23- User check duplicate validation,when trying to add a malpractice marked student again in malpractice form ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_checking_duplicate_validation_for_existing_malpractice_marked_student" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="TC_Absentee_Malpractice_24- User verifying students entered in malpractice and malpractice submitted status ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_verifying_malpractice_students_and_their_status" />
+ 			</methods>
+		</class>
+	</classes>
+</test>
+
+<test name="Log Out-         ">
+	<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+	</classes>
+</test>
+
+<test name="Login-As University    ">
+
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="TC_Absentee_Malpractice_25-University user navigating to course listing page">
+ 	<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+ 					<include name="exam_Definition" />
+				 	<include name="user_click_on_exam_courses" />
+				 	<include name="user_passing_institution" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_26- User  revoking entered absentee  ">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="University_User_revoking_absentee_details" />
+ 			</methods>
+		</class>
+	</classes>
+</test>	
+
+<test name="Log Out-from university">
+	<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+	</classes>
+</test>
+
+<test name="Login-As College z ">
+
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_27-User navigating  to  course  listing  page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsMalRegression">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>	
+	
+<test name="TC_Absentee_Malpractice_28- Error when user entering malpractice student as absentee">
+	<classes>
+		<class name="com.ospyn.ktu.test.AbsMalRegression">
+			<methods>
+ 				<include name="User_enetering_malpractice_student_as_absentee" />
+ 			</methods>
+		</class>
+	</classes>
+</test>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

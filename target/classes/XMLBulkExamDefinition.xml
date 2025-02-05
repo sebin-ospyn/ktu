@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BulkExamDefinition" preserve-order="true">
+
+  	   <test name="Login-As University">
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_ExamDefinition bulk-Adding and approving new Exam Definition"> 
+		<classes>
+			<class name="com.ospyn.ktu.test.ExamDefinition">
+			    <methods>
+					<include name="university_homepage_loaded" />
+					<include name="UniversityExam_click" />
+				  	<include name="click_addButton" />  
+					<include name="read_Excel" />
+					<include name="readAndenter_examinationDetails" />
+					<include name="readAndenter_examSemesters" />
+					<include name="readAndenter_feeDetails" />
+					<include name="readAndenter_examRegDetails" />
+					<include name="readAndenter_regAllowedcourse" />
+					<include name="readAndenter_moderationDetails" />
+					<include name="approve_examDefinition" />
+					<include name="validateResult" />
+				</methods>
+			</class>
+		</classes>
+	</test>   
+
+	
+	
+	
+	
+	
+</suite>

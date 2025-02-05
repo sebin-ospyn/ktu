@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BulkRegularRegistration" preserve-order="true">
+
+      <test
+		name="Login-As University">
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Regular bulk registration-searching student details">
+		<classes>
+			<class name="com.ospyn.ktu.test.BulkRegularRegistration">
+			    <methods>
+			        <include name="search_Students" />
+				    <include name="reading_Students" />
+				    <include name="read_ParentBranch" />
+				    <include name="examCredit_Value" />
+				    <include name="maxCreditValue" />
+				    <include name="userLogout" />
+				    <include name="student_Registration" /> 				     
+				</methods>
+			</class>
+		</classes>
+	</test>     
+	
+      	<test name="Login-As College">
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+
+    <test name="TC_Regular bulk registration-Check whether the user is able to mark verified/fee collected for students">
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.BulkRegularRegistration">
+			    <methods>
+			        <include name="college_ExamModule" />
+					<include name="college_ExamSearch" />
+				    <include name="feeCollectedVerified_Check" />  
+ 				</methods>
+			</class>
+		</classes>
+	</test>  
+	
+	<test name="TC_Regular bulk registration-Check whether user is able to submit exam registration">
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.BulkRegularRegistration">
+			    <methods>
+			         <include name="branch_Submission" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+ <test name="TC_Regular bulk registration-fee payment">
+		<classes>
+			<class name="com.ospyn.ktu.test.BulkRegularRegistration">
+			    <methods>
+					<include name="click_payNow()" /> 
+					<include name="payment()" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	
+	<test name="Logout-From College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<!--<include name="next_College" />-->
+				<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	                  	
+</suite>

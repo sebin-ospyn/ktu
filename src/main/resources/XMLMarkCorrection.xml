@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SemesterEnrollment" preserve-order="true">
+
+
+<test name="Login-As University user">
+	<classes>
+		<class name="com.ospyn.ktu.test.Login">
+			<methods>
+				<include name="ktu_Page_Loaded" />
+				
+			</methods>
+		</class>
+	</classes>
+</test>
+	
+	
+<!--<test name="Mark Correction-Happy flow">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Perform_Main_Action"/>
+			</methods>
+		</class>
+	</classes>
+</test>	-->
+
+<test name="Mark Correction-Grade updated in student curriculum">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Perform_st_Action"/>
+			</methods>
+		</class>
+	</classes>
+</test>	
+
+	
+</suite>

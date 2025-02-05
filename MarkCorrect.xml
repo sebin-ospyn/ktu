@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<test name="Mark Correction-Loading KTU Home Page">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<include name="ktu_Page_Loaded" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Mak Correction-Loading KTU Home Page">
+		<classes>
+			<class name="com.ospyn.ktu.test.Database">
+			<methods>
+				<include name="db" />
+			</methods>
+			</class>
+		</classes>
+	</test> 
+</suite> 

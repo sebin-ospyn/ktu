@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EvaluationByCollege" preserve-order="true">
+
+
+<test name="Login-As College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="Evaluation_By_college01-Checking user is able to fetch course and faculty details">	
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_on_evaluation_by_college"/>
+					<include name="user_search_course"/>
+					<include name="user_fetching_faculties"/>
+					<include name="logout_from_college"/>
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="Evaluation_by_college02-Faculty choosing courses for valuation">
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="Valuation" />
+					<!--<include name="test_Method" />-->
+					<!--<include name="Attendance_Internal" />-->
+					<!--<include name="click_Exam_Tab_faculty" />-->
+					<!--<include name="click_evaluaton_by_college_mark_entry_menu" />-->
+					<!--<include name="User_search_assigned_courses" />-->
+					<!--<include name="User_click_on_enter_marks"/>-->
+				 </methods>
+			</class>
+		</classes>
+	</test>
+	
+<!--<test name="Evaluation_by_college03-Faculty entering marks">
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="Faculty_entering_marks" />
+					<include name="logout_from_user" />
+				</methods>
+ 			</class>
+		</classes>	
+	</test>-->
+
+<test name="Login-College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="Evaluation_by_college04-College user assert the the valuation status which is submitted by faculty">
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_on_evaluation_by_college" />
+					<include name="college_listout_faculty_submitted_details" />
+					<include name="user_asserting_valution_submitted_by_faculty" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="Evaluation_by_college05-College user submit the valuation data to the university">
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="User_click_submit_button" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="Evaluation_by_college06-College user asserting valuation status after submitted to university">
+		<classes>
+			<class name="com.ospyn.ktu.test.EvaluationByCollege">
+				<methods>
+					<include name="User_assrtng_vltn_mrk_sbmitd_by_college" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+
+
+
+
+
+</suite>

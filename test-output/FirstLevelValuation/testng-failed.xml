@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FirstLevelValuation]">
+  <test thread-count="5" name="TC_FirstLevelValuation_01-Packet preparation from camp side(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="getTestName"/>
+          <include name="click_create_or_view_packets"/>
+          <include name="endTest"/>
+          <include name="click_save_or_verify"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_01-Packet preparation from camp side(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_02-Post faculty member(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="click_search_button_in_the_post_faculty_member_page"/>
+          <include name="getTestName"/>
+          <include name="click_post_faculty_members_tab"/>
+          <include name="endTest"/>
+          <include name="click_Valuation_Tab"/>
+          <include name="posting_faculty_members_page"/>
+          <include name="getResult"/>
+          <include name="click_post_faculty_button"/>
+          <include name="post_faculty"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_02-Post faculty member(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_03-Packet distribution(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="getTestName"/>
+          <include name="distribute_packets"/>
+          <include name="click_distribute_packets"/>
+          <include name="endTest"/>
+          <include name="getResult"/>
+          <include name="click_add_button"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_03-Packet distribution(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_04-storing false number(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="click_view_generated_false_number"/>
+          <include name="getTestName"/>
+          <include name="endTest"/>
+          <include name="storing_false_numbers"/>
+          <include name="logout"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_04-storing false number(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_05-First level mark entry(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="click_assigned_courses"/>
+          <include name="Login_as_faculty"/>
+          <include name="click_search_button"/>
+          <include name="getTestName"/>
+          <include name="selecting_assigned_packets"/>
+          <include name="enter_marks"/>
+          <include name="endTest"/>
+          <include name="click_Valuation_Tab"/>
+          <include name="logout"/>
+          <include name="getResult"/>
+          <include name="add_filters_in_assigned_courses_page"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_05-First level mark entry(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_06-Recieving packets(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="Login_as_adexam"/>
+          <include name="getTestName"/>
+          <include name="click_distribute_packets"/>
+          <include name="click_Valuation_Tab"/>
+          <include name="endTest"/>
+          <include name="Receiving_packets"/>
+          <include name="getResult"/>
+          <include name="filters_in_distribute_packets_page"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_06-Recieving packets(failed) -->
+  <test thread-count="5" name="TC_FirstLevelValuation_07-Revoking and cancelling the returned packets(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.FirstLevelValuation">
+        <methods>
+          <include name="Cancelling_distributed_packets"/>
+          <include name="Packets_send_back_to_the_examiner"/>
+          <include name="getTestName"/>
+          <include name="endTest"/>
+          <include name="getResult"/>
+          <include name="Revoking_returned_packets"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.FirstLevelValuation -->
+    </classes>
+  </test> <!-- TC_FirstLevelValuation_07-Revoking and cancelling the returned packets(failed) -->
+</suite> <!-- Failed suite [FirstLevelValuation] -->

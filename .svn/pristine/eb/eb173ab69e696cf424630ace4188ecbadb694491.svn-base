@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AbsenteeMalpracicebulk" preserve-order="true">
+
+	
+<test name="Login-As College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="TC_Absentee_Malpractice_Bulk_01-Fetching the course code from absentee malpractice listing page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+					<include name="course_Code" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="TC_Absentee_Malpractice_Bulk_02-User get the eligible student details">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exam_Eligibility" />
+					<include name="fetch_EligibleStudent_id" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_03-The user navigates to the Course Listing page to enter absentee or malpractice information">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_04-The user entering malpractice against particular courses">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="entering_Malpractice_Data" />
+				    <include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_05-The user entering absentee against particular courses">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+ 					<include name="entering_Absentee_Data" />
+				    <include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_06-The user generate absentee malpractice report">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="user_Generate_Reports" />
+					<include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_07-Verify that user is not able to enter answersheet packet without submitting additional false number details and valuation camp">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="user_Click_Answersheet_Packetentry_button" />
+					<include name="user_Asserting_Error" />
+					<include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Absentee_Malpractice_Bulk_08- Checking that validation message is displayed for required fields when a user tries to save incomplete barcode details. ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="user_Leaves_Mandatory_Field_And_Validate_Errormessage" />
+					<include name="user_Validate_Courselisting_Page" />
+ 					<include name="user_Logout_From_College" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="Login - As University ">
+		<parameter name="username" value="adexam"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_9- User get additionally generated Alphanumeric Code ">
+<!--<parameter name="falsenumber" value="2023 - 2024,#B.Tech,#B.Tech S5 (R,S) Exam Dec 2023 (2019 scheme) test,#SADGURU,#Invalid" />-->
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Valuation_Module" />
+					<include name="user_click_Viewfalsenumbergenerate" />
+					<include name="user_fetching_falsenumber" />
+					<include name="user_Logout_From_University" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Login-As College  ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_10-The user navigates to the Course Listing page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--<test name="TC_Absentee_Malpractice_Bulk_11- Error showing when an absentee student try to replacing bar code ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+				<include name="user_Replace_Barcode_Absentee_Student" />
+				<include name="user_Validate_Error_Absentee_Student" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Absentee_Malpractice_Bulk_12-User navigates to the Course Listing page">
+ 		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_Exams_Menu" />
+					<include name="exam_Definition_Details" />
+					<include name="user_Validate_Courselisting_Page" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+	<test name="TC_Absentee_Malpractice_Bulk_11- User Sucessfully replace alphanumeric code ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="user_Replace_Barcode_And_Validate" />
+					<include name="user_Validate_Courselisting_Page" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="TC_Absentee_Malpractice_Bulk_12- Successful packet entry ">
+		<classes>
+			<class name="com.ospyn.ktu.test.AbsenteeMalpracticeBulk">
+				<methods>
+					<include name="user_Entering_Answersheet_packets" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Log Out-   ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="next_College" />
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

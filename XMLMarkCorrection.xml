@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  
+  	<test name="Mark Correction-Loading KTU Home Page">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<include name="ktu_Page_Loaded" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<!--<test name="Mark Correction-Happy flow">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Perform_Main_Action"/>
+			</methods>
+		</class>
+	</classes>
+</test>	-->
+
+<test name="Mark Correction-Failing a passed student">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Perform_Student_Failing"/>
+			</methods>
+		</class>
+	</classes>
+</test>	
+
+<test name="Mark Correction-Passing a failed student">		
+	<classes>
+		<class name="com.ospyn.ktu.test.ResultCorrection">
+			<methods>					
+				<include name="Perform_Student_Passing"/>
+			</methods>
+		</class>
+	</classes>
+</test>	
+
+</suite> 

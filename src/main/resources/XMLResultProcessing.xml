@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ResultProcesing" preserve-order="true">
+
+<test name="TC_01-Login-As ADEXAM">
+		<parameter name="username" value="adexam"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_ResultProcessing01-User fetching exam definiton details for assertion">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_Search_Exam" />
+					<include name="User_Fetching_ExamDef_details" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_ResultProcessing02-Check that user is able to navigate to result processing page">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_click_result" />
+					<include name="User_click_resultProcessing" />
+					<include name="User_filter_examdef_data" />
+					<include name="User_click_resultProcessing_agnst_ExamDef" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_ResultProcessing03-User validating examination details listed in result processing page">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_asserting_ExamDef" />
+					<include name="User_asserting_ExamMode_ExamType_etc" /> 
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--<test name="TC_ResultProcessing04-Check whether that user is able to validate Preprocessor">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_validating_preprocessor" />
+					<include name="User_validating_preprocessorJob" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+	<test name="TC_ResultProcessing05-Check whether that user is able to validate  Mark Validation">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_validating_markValidation" />
+					
+  				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!--<test name="TC_ResultProcessing06-Check whether that user is able to run Mark Validation job">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_process_graceMark_Moderation" />
+					
+  				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+	<!--<test name="TC_ResultProcessing07-Check whether that user is able to run Processresult job">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_process_processResult" />
+					
+  				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+	<!--<test name="TC_ResultProcessing08-Check whether that user is able to run post process job">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_click_on_postProcess_Button" />
+					<include name="User_click_on_postProcessAll" />
+  				</methods>
+			</class>
+		</classes>
+	</test>-->
+ 	
+	<test name="TC_ResultProcessing09-Check whether user is able to publish result">
+		<classes>
+			<class name="com.ospyn.ktu.test.ResultProcessing">
+				<methods>
+					<include name="User_click_on_publish_Button" />
+					<include name="User_click_on_publish_selected" />
+  				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+	
+	
+	</suite>
+	

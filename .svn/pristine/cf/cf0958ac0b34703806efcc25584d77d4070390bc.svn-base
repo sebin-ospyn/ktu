@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ValuationCamp" preserve-order="true">
+
+
+<test name="TC_00-Login-As University">
+		<parameter name="username" value="adexam"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Valuation_Camp_01-User Navigate to valuation module">
+		<classes>
+			<class name="com.ospyn.ktu.test.ValuationCamp">
+				<methods>
+					<include name="User_click_on_valuation_module" />
+					<include name="User_click_on_valuation_camp" />
+					<include name="User_validating_valuation_camp_page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Valuation_Camp_02-User adding valuation camp details">
+		<classes>
+			<class name="com.ospyn.ktu.test.ValuationCamp">
+				<methods>
+ 					<include name="User_searching_created_camp" />
+					<!--<include name="User_validating_created_camp" />-->
+					<include name="User_editing_created_camp" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+	
+	
+	
+	
+	
+	
+	
+<!--<test name="TC_Valuation_Camp_02-User configuring valuation camp">
+		<classes>
+			<class name="com.ospyn.ktu.test.ValuationCamp">
+				<methods>
+					<include name="User_click_add_button" />
+					<include name="User_entering_details_in_valutionCamp_configuring_Page" />
+					<include name="User_checking_chiefenabled_check_box" />
+					<include name="User_enetring_memberprovidingExaminers_answersheets" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+<!--<test name="TC_Valuation_Camp_03-User saving valuation camp details">
+		<classes>
+			<class name="com.ospyn.ktu.test.ValuationCamp">
+				<methods>
+					<include name="User_click_on_save_button" />
+					<include name="User_searching_created_camp" />	
+					<include name="User_validating_created_camp" />
+					<include name="User_changing_camp_status" />
+					<include name="User_validating_camp_status" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="Logout-From university">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+ 					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+
+
+</suite>

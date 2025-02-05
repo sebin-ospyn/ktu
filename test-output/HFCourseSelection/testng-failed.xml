@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HFCourseSelection]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TC_Course_Selection_01-Academic course selection for a branch after selecting courses in slots(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.CourseSelection">
+        <methods>
+          <include name="getTestName"/>
+          <include name="endTest"/>
+          <include name="validate_Saved_Success"/>
+          <include name="choose_Course"/>
+          <include name="getResult"/>
+          <include name="click_Save"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.CourseSelection -->
+    </classes>
+  </test> <!-- TC_Course_Selection_01-Academic course selection for a branch after selecting courses in slots(failed) -->
+  <test thread-count="5" name="TC_Course_Selection_02-Submitting branches to the university after  choosing courses for all the branches(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.CourseSelection">
+        <methods>
+          <include name="getTestName"/>
+          <include name="get_Submit_button"/>
+          <include name="endTest"/>
+          <include name="search_Page_Displayed"/>
+          <include name="getResult"/>
+          <include name="validate_Submit_Success"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.CourseSelection -->
+    </classes>
+  </test> <!-- TC_Course_Selection_02-Submitting branches to the university after  choosing courses for all the branches(failed) -->
+</suite> <!-- Failed suite [HFCourseSelection] -->

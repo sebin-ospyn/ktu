@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HFeditValuationCamp" preserve-order="true">
+
+ 
+<test name="TC_Valuation_Camp_03-User adding valuation camp details">
+		<classes>
+			<class name="com.ospyn.ktu.test.Editvaluationcamp">
+				<methods>
+ 					 <include name="User_editing_created_camp" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="Logout-From university">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+ 					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+</suite>

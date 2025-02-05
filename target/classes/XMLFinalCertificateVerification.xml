@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<test name="Login-As University user">
+	
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+				<include name="ktu_Page_Loaded" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="TC_FirstLevelValuation_01-CertificateVerification">		
+		<classes>
+			<class name="com.ospyn.ktu.test.CertificateVerifications">
+				<methods>	
+				<include name="HFCertificateVerification" />	
+				<include name="multipleStudentsIncompleteStatus" />
+				<include name="multipleStudentsCompletedStatus" />
+				<include name="verifyContent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite>

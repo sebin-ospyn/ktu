@@ -1,0 +1,5 @@
+browser=firefox
+url=http://localhost:8080/university/login.htm
+driverPath.firefox=/home/u1602/ws-2023-06/KTU_AutomationTestNG1/Drivers/geckodriver
+driverPath.chrome=/home/u1602/ws-2023-06/KTU_AutomationTestNG1/Drivers/chromedriver
+reportPath=/home/u1602/automation

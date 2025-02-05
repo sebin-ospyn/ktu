@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EnableStaffAdvisor" preserve-order="true">
+
+	<test name="Login-As College">
+	
+		<parameter name="username" value="ssnitkhd"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Attendance_Internal01-User fetch faculty id and course details">
+		<parameter name="attendanceinternaldetails" value="2023 - 2024,#B.Tech,#Full Time,#S5,#Pursuing Students,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.EnableStaffAdvisor">
+			<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_student_attandance_internal" />
+					<include name="user_fetch_ChildBranch" />
+	 		</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Attendance_Internal02-Identify the advisor name">
+		<parameter name="staffadvisordetails" value="2021 - 2022,#B.Tech,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.EnableStaffAdvisor">
+				<methods>
+					<include name="user_click_the_Academics_Auditing_Tab" />
+					<include name="user_select_staff_Advisor" />
+					<include name="logout_from_user" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="Login-As University">
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	
+	<test name="TC_Attendance_Internal03-Navigate to user details page">
+		<parameter name="staffadvisordetails" value="2021 - 2022,#B.Tech,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.EnableStaffAdvisor">
+				<methods>
+					<include name="user_Navigate_to_userdetails_page" />
+					<include name="user_Checking_StaffAdvisor_Status" />
+<!--					<include name="user_Checking_disabled_StaffAdvisor_Status" />-->
+					<include name="logout_from_user" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="  Login-As College">
+	
+		<parameter name="username" value="ssnitkhd"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="TC_Attendance_Internal04- Identify the advisor name">
+		<parameter name="staffadvisordetails1" value="2021 - 2022,#B.Tech,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.EnableStaffAdvisor">
+				<methods>
+					<include name="user_click_the_Academics_Auditing_Tab" />
+					<include name="user_click_batches_Tab" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Attendance_Internal05- Navigate to user details page">
+		<parameter name="staffadvisordetails" value="2021 - 2022,#B.Tech,#Regular" />
+		<classes>
+			<class name="com.ospyn.ktu.test.EnableStaffAdvisor">
+				<methods>
+					<include name="user_Checking_disabled_StaffAdvisor_Status" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</suite>

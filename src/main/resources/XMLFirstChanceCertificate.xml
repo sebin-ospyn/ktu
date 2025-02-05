@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FirstChanceCertificate" preserve-order="true">
+
+
+
+
+<!--<test name="Evaluation_By_college01-Checking user is able to fetch course and faculty details">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+				<include name="test"/>
+				<include name="Click_Exam" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+<test name="TC_01-Login-As Student">
+		<parameter name="username" value="TVE20ME077"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate02-User fetching student reg no and staff advisor id">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Fetching_data" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+<test name="First_chance_certificate03-User navigate to first chance certificate page">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_Exam" />
+					<include name="Click_First_chanceCertificate" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate04-Check whether that invitation is listing for first chance certificate request">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="User_asserting_inviation" />
+					<!--<include name="log_out" />-->
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate05-Check whether that user is able to request for first chance certificate">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_First_chanceCertificate_add_rqst_bttn" />
+					<include name="Validte_rechd_page" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="First_chance_certificate06-Check whether that user is able to submit firstchance request and do payment ">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Select_passd_courses" />
+					<include name="Adding_Attachmnt_and_submit" />
+					<include name="Certificate_payment" />
+					<include name="log_out" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<!--test name="First_chance_certificate06-User selecting staff advisor">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="First_chance_certificate07-Check that staff adviosr is able to validate the request and do forward to principal">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="" />
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+	
+	
+<test name="TC_07-Login-As Staff adviosr">
+		<parameter name="username" value="KTU-F7254"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate08-Staff adviosr is Navigate to first chance certificate requests">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_Exam" />
+					<include name="Staffadvsr_Click_Fstchncreqst" />
+					<include name="Staffadvsr_choose_submittedStudent" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+<test name="First_chance_certificate09-Staff adviosr recommend certificate and forwarded to principal ">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Frwrded_to_prncpl" />
+					<include name="log_out" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+<test name="Login-As College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="login_With_Excel" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="First_chance_certificate10-College user is navigate to first chance certificate requests">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_Exam" />
+					<include name="Staffadvsr_Click_Fstchncreqst" />
+					<include name="College_choose_submittedStudent" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+
+<test name="First_chance_certificate11-College user recommend certificate and forwarded to university ">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Frwrded_to_university" />
+					<include name="log_out" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+
+
+<test name="TC_01-Login-As Univeristy">
+		<parameter name="username" value="ktusupport02"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate12-University user navigate to first chance certificate page">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_Exam" />
+					<include name="University_user_click_first_chanceCertificate" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate13-University approve first chance certificate ">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="User_choose_stdnt_sbmtd_by" />
+					<include name="University_apprv" />
+					<include name="log_out" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+<test name="TC_01-Login-As  Student">
+		<parameter name="username" value="TVE20ME077"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="First_chance_certificate14-User generate first chance certificate">	
+		<classes>
+			<class name="com.ospyn.ktu.test.FirstChanceCertificate">
+				<methods>
+					<include name="Click_Exam" />
+					<include name="Click_First_chanceCertificate" />
+					<include name="Studnt_click_editReqst" />
+					<include name="Studnt_generate_firstchancecetfctt" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SemesterEnrollment]">
+  <test thread-count="5" name="Revaluation -Performing the login as student(failed)">
+    <classes>
+      <class name="com.ospyn.ktu.test.Revaluation">
+        <methods>
+          <include name="getResult"/>
+          <include name="Student_Revaluation_Registration"/>
+          <include name="endTest"/>
+          <include name="getTestName"/>
+        </methods>
+      </class> <!-- com.ospyn.ktu.test.Revaluation -->
+    </classes>
+  </test> <!-- Revaluation -Performing the login as student(failed) -->
+</suite> <!-- Failed suite [SemesterEnrollment] -->

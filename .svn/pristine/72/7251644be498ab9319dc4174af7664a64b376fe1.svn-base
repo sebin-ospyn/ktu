@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Invitation" preserve-order="true">
+
+	<test name="Login-As University">
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+		<test name="TC_Invitation_01-Creating a new Invitation for Course Selection/Course Mapping">
+
+		<parameter name="invitationDetails"
+			value="2023 - 2024,Course Selection/Course Mapping Btech S5,20/10/2023,Semester,Pursuing Students,B.Tech,Full Time,S5,B.Tech Full Time 2019 Scheme" />
+		<classes>
+			<class name="com.ospyn.ktu.test.Invitation">
+				<methods>
+					<include name="click_University_Tab" />
+					<include name="click_Invitation" />
+					<include name="click_Add_Button" />
+					<include name="click_CourseSelection_Add_Button" />
+					<include name="enter_CourseSelection_Details" />
+					<include name="click_Save" />
+					<include name="click_Submit" />
+					<include name="click_Verify" />
+					<include name="click_Approve" />
+					
+				</methods>
+			</class>
+		</classes>
+		</test>
+		
+		<test
+		name="TC_Invitation_02-Validation of newly created invitation">
+
+		<parameter name="invitationDetails"
+			value="2023 - 2024,Course Selection/Course Mapping,Course Selection/Course Mapping Btech S6" />
+		<classes>
+			<class name="com.ospyn.ktu.test.Invitation">
+				<methods>
+					<include name="click_University_Tab" />
+					<include name="click_Invitation" />
+					<include name="enter_Invitation_Details" />
+					<include name="validate_Invitation" />
+                    
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	
+	
+<test name="Log Out-  ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 
+

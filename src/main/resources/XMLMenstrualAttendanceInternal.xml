@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MenstrualAttendanceInternal" preserve-order="true">
+
+
+
+<test name="Login-As College">
+		<parameter name="username" value="AE885131"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="Attendance_Internal-User fetch Student details">	
+<!--		<parameter name="student" value="2021 - 2022,#B.Tech,#Full Time,#Registered,#Male" />-->
+		<classes>
+			<class name="com.ospyn.ktu.test.Menstraualattendanceinternal">
+				<methods>
+					<include name="user_navigate_to_student_details" />
+					<include name="reading_Students" />
+				</methods>
+			</class>
+		</classes>
+</test>
+
+<test name="Attendance_Internal-User fetch faculty id and course details">	
+<!--		<parameter name="attendanceinternaldetails" value="2023 - 2024,#B.Tech,#Full Time,#S5,#Pursuing Students,#Regular" />-->		
+<classes>
+			<class name="com.ospyn.ktu.test.Menstraualattendanceinternal">
+				<methods>
+					<include name="click_Exam_Tab" />
+					<include name="click_student_attandance_internal" />
+					<include name="user_click_Internals_Button" />
+					<include name="College_Submit_the_student_Attendance_and_Internal" />
+					<include name="User_validate_successful_submit_validation" />
+ 				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test name="Log Out-    ">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>

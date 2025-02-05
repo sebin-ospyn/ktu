@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="MasterSuite">
+    <suite-files>
+     
+        <suite-file path="XMLCourseMapping1.xml" />
+        <suite-file path="XMLCourseSelection_CourseMapping.xml"/>
+        <suite-file path="XMLCourseMapping2.xml"/>
+        
+    </suite-files>
+</suite>
+
+

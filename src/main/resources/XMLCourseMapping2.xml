@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CourseMapping2" preserve-order="true">
+
+	<test name="Login-As College">
+		<parameter name="username" value="christ"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				
+				<methods>
+				
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+					
+				</methods>
+				
+			</class>
+		</classes>
+	</test>
+
+	<!-- <test
+		name="TC_Course_Mapping_03-Check whether user is able to save course mapping
+	without filling any field ">
+		
+		<classes>
+
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="click_SaveCourseMapping_Button" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+ <test
+		name="TC_Course_Mapping_04-Check whether user is able to do mark as completed
+	in  course mapping without filling any field">
+		
+
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+			
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="mark_As_Complete" />
+				</methods>
+				
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_05-Check whether user is able to save course mapping
+	with giving only faculty in A slot">
+		
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Faculty_Only" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_FacultyOnly" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_06-Check whether user is able to do mark as completed
+	in  course mapping with giving only faculty in A slot">
+		
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Faculty_Only" />
+					<include name="mark_As_Complete" />
+					<include name="validate_FacultyOnly" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_07-Check whether user is able to save course mapping
+	with giving only one faculty and make him as QP setter and make the
+	experience field blank against a slot">
+		
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Faculty_QpSetter_Save" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_Save_Faculty_QPSetter" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_08-Check whether user is able to mark as complete with
+	giving only one faculty and make him as QP setter and make the experience
+	field blank against a slot">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Faculty_QpSetter_Save" />
+					<include name="mark_As_Complete" />
+					<include name="validate_Mark_Faculty_QPSetter" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Mapping_09-Check whether user is able to add same faculty
+	against the same slot and save">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Duplicate_Faculty_Main" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="error_Message_Duplicate_Faculty" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_Course_Mapping_10-Check whether user is able to add same faculty
+	against the same slot and do mark as completed">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Duplicate_Faculty_Main" />
+					<include name="mark_As_Complete" />
+					<include name="error_Message_Duplicate_Faculty" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+		
+		<test name="TC_Course_Mapping_11-Check whether user is able to save course
+	mapping by giving same faculty in two slots and save it">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Same_Faculty_Two_Slots" />
+					<include name="mark_As_Complete" />
+					<include name="error_Message_Duplicate_Faculty" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test
+		name="TC_Course_Mapping_12-Error test case for adding faculty and mark  no
+	registration together">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_No_Registration" />
+					<include name="error_Message_No_Registration" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_13-Check whether user is able to delete a duplicate row
+	against a slot">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="delete_Duplicate_Row" />
+				
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_14-Check whether user is able to delete a the only row
+	against a slot">
+	
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="delete_Only_Row" />
+					<include name="validate_Only_Row_Deletion" />
+				
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_15-Check whether user is able to make two faculty as
+	main faculty against a course with same batch">
+		
+		<classes>
+			
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="two_Main_Faculty" />
+					
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_16-Check whether user is able to make two faculty
+		         as main faculty against a course with different batch">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch2" />
+					<include name="two_BatchesMainFaculty" />
+					<include name="click_SaveCourseMapping_Button" />
+
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	<test
+		name="TC_Course_Mapping_17-Check whether user is able to save course mapping
+	with giving QP setter against a 
+		             slot as No and save it  after filling all other fields">
+	
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="QpSetter_No" />
+					<include name="click_SaveCourseMapping_Button" /
+					<include name="validate_No_QPsetter" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test
+		name="TC_Course_Mapping_18-Check whether user is able to save the course
+	mapping without 
+		                                     selecting QP setter for part 1 part 2 course ">
+						<parameter name="exp_Entered" value="1" />
+			
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	<test
+		name="TC_Course_Mapping_19-Check whether user is able to make the course mapping  mark as completed  without selecting QP    
+		               setter for part 1 part 2 course  ">
+							<parameter name="exp_Entered" value="1" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_20-Check whether user is able to save the course
+	mapping without selecting QP setter for part 1 part 2 course and without experience ">
+				<parameter name="exp_Entered" value="2" />
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	 
+ 	<test
+		name="TC_Course_Mapping_21-Check whether user is able to make  the course
+	mapping as completed by selecting 
+											QP setter as no for part 1 part 2 course and without giving experience">
+	
+						<parameter name="exp_Entered" value="2" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_22-Check whether user is able to save course mapping if
+	one faculty is marked as 
+		           QP setter and given experience for Part 1 and for part 2 QP setter is not
+	selected and experience not given">
+							<parameter name="exp_Entered" value="3" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	<test
+		name="TC_Course_Mapping_23-Check whether user is able to save course mapping if
+	one faculty is marked as QP setter and given 
+		                            experience for Part 2 and for part 1 QP setter is in not selected and
+	experience is not given  ">
+						<parameter name="exp_Entered" value="4" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+
+	<test
+		name="TC_Course_Mapping_24-Check whether user is able to save course mapping if
+	faculty is marked as NO in  QP setter and given 
+		                experience for Part 1 and for part 2 QP setter is not selected and experience
+	is not given">
+							<parameter name="exp_Entered" value="5" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+<test
+		name="TC_Course_Mapping_25-Check whether user is able to save course mapping if
+	faculty is marked as NO in QP setter and 
+		          given experience for Part 2 and for part 1 QP setter is  not selected and
+	experience is not given">
+						<parameter name="exp_Entered" value="6" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_26-Check whether user is able to save course mapping if
+	one faculty is marked as QP 
+		      setter and given experience for Part 1 and for part 2 QP setter is  selected as
+	yes and experience is not given">
+						<parameter name="exp_Entered" value="7" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_27-Check whether user is able to save course mapping if
+	one faculty is marked as QP setter and 
+		     given experience for Part 2 and for part 1 QP setter is  selected as yes and
+	experience is not given">
+							<parameter name="exp_Entered" value="8" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_28-Check whether user is able to save course mapping if
+	both  faculty is marked as QP 
+		                           setter for part 1 and part 2 and without giving experience">
+						<parameter name="exp_Entered" value="9" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	
+		<test
+		name="TC_Course_Mapping_30-Check whether user is able to save course mapping if
+	one faculty is marked as QP setter and 
+		       not given experience for Part 1 and for part 2 QP setter is not selected  and
+	experience is not given">
+						<parameter name="exp_Entered" value="10" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	<test
+		name="TC_Course_Mapping_31-Check whether user is able to save course mapping if
+	one faculty is selected  as NO in  QP 
+		      setter and not given experience for Part 1 and for part 2 QP setter is not
+	selected  and experience is not given  ">
+						<parameter name="exp_Entered" value="11" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_32-Check whether user is able to save course mapping if
+	one faculty is marked as QP setter and not given 
+		        experience for Part 2 and for part 1 QP setter is not selected  and experience
+	is not given ">
+							<parameter name="exp_Entered" value="12" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+			<test
+		name="TC_Course_Mapping_33-Check whether user is able to save course mapping if
+	one faculty is selected  as NO in  QP setter 
+		          and not given experience for Part 2 and for part 1 QP setter is not selected
+	and experience is not given ">
+						<parameter name="exp_Entered" value="13" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_34-Check whether user is able to save course mapping if
+	one faculty is selected  as yes In  QP setter
+		       and  given experience for Part 1 and for part 2 QP setter is  selected  as yes and
+	experience is not given">
+						<parameter name="exp_Entered" value="14" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_35-Check whether user is able to save course mapping if
+	one faculty is selected  as yes In  QP setter
+		       and  not given experience for Part 1 and for part 2 QP setter is  selected  as yes
+	and experience is  given ">
+						<parameter name="exp_Entered" value="15" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_36-Check whether user is able to save course mapping if
+	one faculty is selected  as yes in  QP setter
+		 and   given experience for Part 1 and for part 2 QP setter is  selected  as yes and
+	experience is  given">
+							<parameter name="exp_Entered" value="16" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="click_SaveCourseMapping_Button" />
+					<include name="validate_No_QPsetter1" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test
+		name="TC_Course_Mapping_37-Check whether user is able to do mark as completed in course mapping if one faculty is marked as 
+		      QP setter and given experience for Part 1 and for part 2 QP setter is not selected and experience is not given">
+		<parameter name="exp_Entered" value="3" />
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+<test
+		name="TC_Course_Mapping_38-Check whether user is able to do mark as completed in  course mapping if one faculty is marked as 
+		       QP setter and given experience for Part 2 and for part 1 QP setter is in not selected and experience is not given">
+	
+		<parameter name="exp_Entered" value="4" />
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_39-Check whether user is able to do mark as completed in course mapping if  faculty is marked as NO 
+		      in  QP setter and given experience for Part 1 and for part 2 QP setter is  not selected and experience is not given">
+		
+		<parameter name="exp_Entered" value="5" />
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_40-Check whether user is able to do mark as completed in course mapping if  faculty is marked as NO 
+		in  QP setter and given experience for Part 2 and for part 1 QP setter is not selected and experience is not given">
+		
+		<parameter name="exp_Entered" value="6" />
+
+		<classes>
+
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_41-Check whether user is able to do mark as completed in course mapping if one faculty is marked as 
+		       QP setter and given experience for Part 1 and for part 2 QP setter is  selected as yes and experience is not given">
+		
+						<parameter name="exp_Entered" value="14" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	
+	<test
+		name="TC_Course_Mapping_42-Check whether user is able to do mark as completed in course mapping if one faculty is marked as 
+		      QP setter and given experience for Part 2 and for part 1 QP setter is  selected as yes and experience is not given">
+		
+						<parameter name="exp_Entered" value="15" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_43-Check whether user is able to do mark as completed in course mapping if both  faculty is marked as
+		         QP setter for part 1 and part 2 and without giving experience">
+							<parameter name="exp_Entered" value="9" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		
+		<test
+		name="TC_Course_Mapping_44-Check whether user is able to do mark as completed in course mapping if one faculty is selected  
+		        as NO In  QP setter and not given experience for Part 1 and for part 2 QP setter is not selected  and experience 
+		         is not given ">
+							<parameter name="exp_Entered" value="11" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+			<test
+		name="TC_Course_Mapping_45-Check whether user is able to do mark as completed in course mapping if one faculty is marked as
+		      QP setter and not given experience for Part 2 and for part 1 QP setter is not selected  and experience is not given">
+						<parameter name="exp_Entered" value="12" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_46-Check whether user is able to do mark as completed in course mapping if one faculty is selected  
+		      as NO In  QP setter and not given experience for Part 2 and for part 1 QP setter is not selected  and experience 
+		      is not given ">
+							<parameter name="exp_Entered" value="13" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+		
+		<test
+		name="TC_Course_Mapping_47-Check whether user is able to do mark as completed in course mapping if one faculty is selected  
+		        as yes In  QP setter and  given experience for Part 1 and for part 2 QP setter is  selected  as yes and 
+		         experience is not given">
+							<parameter name="exp_Entered" value="7" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_48-Check whether user is able to do mark as completed in course mapping if one faculty is selected  
+		      as yes In  QP setter and  not given experience for Part 1 and for part 2 QP setter is  selected  as yes and experience
+		       is  given">
+							<parameter name="exp_Entered" value="15" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+		<test
+		name="TC_Course_Mapping_49-Check whether user is able to do mark as completed in course mapping if one faculty is selected  
+		      as yes In  QP setter and   given experience for Part 1 and for part 2 QP setter is  selected  as yes and 
+		       experience is  given">
+		
+						<parameter name="exp_Entered" value="16" />
+			
+		<classes>
+		
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="part1_2_WithoutQP" />
+					<include name="mark_As_Complete" />
+
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	
+	
+	
+
+
+<test
+		name="TC_Course_Mapping_16-Check whether user is able to do mark as completed
+	in course mapping with giving 
+		          QP setter against a slot as No and save it  after filling all other fields">
+		
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="QpSetter_No" />
+					<include name="mark_As_Complete"/>
+					<include name="validate_No_QPsetter" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<test name="TC_Course_Mapping_03-Error test case for Main faculty not found">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="two_Main_Faculty" />
+					<include name="error_Message_MainFaculty" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+
+	
+	<test name="TC_Course_Mapping_03-Check whether college is able to do mark as completed 
+	            course mapping by only adding a faculty as QP setter and giving experience 
+	            for a  course under a slot and  making QP setter and experience as blank in
+	            the other course in the same slot">
+			
+			<classes>
+			
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />	
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="different_Courses" />
+					<include name="mark_As_Complete" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+<!-- <test
+		name="TC_Course_Mapping_50-Course mapping is saved successfully">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="faculty_All_Slots_Save" />
+					<include name="save_Success" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test
+		name="TC_Course_Mapping_51-Course mapping is Marked as Complete">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="mark_As_Complete" />
+					<include name="validate_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_52-Export of Course Mapping Details">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+
+					<include name="select_Marked_Branch" />
+					<include name="click_Export_Button" />
+					<include name="validate_Export_Button" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+  <test
+		name="TC_Course_Mapping_53-Partial Submission of Course mapping to the
+	university">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+				
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="partial_Submission" />
+					<include name="validate_Partial_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+<test
+		name="TC_Course_Mapping_09-Adding two faculties for a single course in course
+	mapping">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="select_Branch" />
+					<include name="enters_Two_Faculties" />
+					<include name="validate_Two_Faculties" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_11-Error test case Selected branch already submitted to
+	the university">
+
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="partial_Submission_Repeat" />
+					<include name="validate_Partial_Submission_Error" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_12-Submission of Course mapping to the university">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="all_Branches_Faculty" />
+					<include name="validate_All_Branches_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test
+		name="TC_Course_Mapping_13-Course Mapping is completed for all the branches and
+	marked as Complete">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="all_Branches_Faculty" />
+					<include name="validate_All_Branches_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_14-Course Mapping of all the branches is submitted to
+	the university">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include
+						name="submit_CourseMapping_All_Branches_To_University" />
+					<include name="validate_All_Branches_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Logout-From College">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="Login-As University">
+		<parameter name="username" value="itoperations"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_15-Revoke the Course Mapping submitted to University">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection_Institution" />
+					<include name="click_Search_Button" />
+					<include name="revoke_Courses" />
+					<include name="validate_Revoke_Branch" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="Logout-From College-1">
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="click_logOut" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="Login-As College-1">
+		<parameter name="username" value="jyothi"></parameter>
+		<parameter name="password" value="pass1@"></parameter>
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+					<include name="loginUser" />
+					<include name="click_Login_Button" />
+					<include name="validate_Login_Success" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_16-Check whether college is able to do course mapping submission
+		        to university without editing the revoked branch ">
+		
+	
+	<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="click_Submit_University_Button" />
+					<include name="validate_Error_Submission" />
+					
+					</methods>
+					</class>
+					</classes>
+					</test>
+
+	<test
+		name="TC_Course_Mapping_17-Course mapping is Marked as Completed successfully">
+		
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				
+				<methods>
+				
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Course_Mapping" />
+					<include name="course_Selection" />
+					<include name="click_Search_Button" />
+					<include name="submit_Revoked_Branch" />
+					<include name="validate_Marked" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_17-Full submission of course mapping to the
+	university">
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include
+						name="submit_CourseMapping_All_Branches_To_University" />
+					<include name="validate_All_Branches_Submission" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test
+		name="TC_Course_Mapping_18-Error Test Case for No Student selected during new
+	Custom Batch creation">
+
+		<parameter name="batchDetails"
+			value="test batch 3,2023 - 2024,B.Tech,Regular,CIVIL ENGINEERING (Full Time),2"
+	/>
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Academic_Auditing_Tab" />
+					<include name="click_Batches" />
+					<include name="click_Add_Button" />
+					<include name="enter_Batch_Details" />
+					<include name="click_Save_Button" />
+					<include name="validate_Error_NoStudent_Batch" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_19-Creating new Custom Batch">
+
+		<parameter name="batchDetails"
+			value="test batch 3,2023 - 2024,B.Tech,Regular,CIVIL ENGINEERING (Full Time),1"
+	/>
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Back_Button" />
+					<include name="click_Add_Button" />
+					<include name="enter_Batch_Details" />
+					<include name="click_Save_Button" />
+					<include name="validate_Save_Batch" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_20-Creating new  Custom Batch with the name of the
+	existing batch">
+
+		<parameter name="batchDetails"
+			value="test batch 3,2023 - 2024,B.Tech,Regular,CIVIL ENGINEERING (Full Time),1"
+	/>
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Add_Button" />
+					<include name="enter_Batch_Details" />
+					<include name="click_Save_Button" />
+					<include name="validate_Error_Save_Batch" />
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+	<test
+		name="TC_Course_Mapping_21-Select Staff Advisor for the Custom Batch created">
+
+		<parameter name="batchDetails"
+			value="2023 - 2024,B.Tech,Regular" />
+		<parameter name="batchName"
+			value="test batch 3" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="click_Back_Button" />
+					<include name="search_Custom_Batch" />
+					<include name="save_Staff_Advisor" />
+					<include name="validate_Save_Staff_Advisor" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test
+		name="TC_Course_Mapping_22-Delete the Custom Batch created">
+
+		<parameter name="batchName"
+			value="test batch 3" />
+		<classes>
+			<class name="com.ospyn.ktu.test.CourseMapping">
+				<methods>
+					<include name="delete_Custom_Batch" />
+					<include name="validate_Error_Delete_Batch" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>-->
+</suite> 
+

@@ -1,0 +1,9 @@
+<h2>Methods that were not run</h2><table>
+<tr><td>com.ospyn.ktu.test.CourseSelection.click_Search<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User clicks on the search button</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.part_Time_error<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User validates the error of course selection for the semester not opened yet</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.course_Selection_Details<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User enters the Course details</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.click_Course_Details<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User clicks on the Course Details from the side menu</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.click_AcademicsTab<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User clicks the academic tab</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.part_Time_error<br/>&nbsp;&nbsp;&nbsp;&nbsp;<i>User validates the error of course selection for the semester not opened yet</i></td></tr>
+<tr><td>com.ospyn.ktu.test.CourseSelection.loginUser</td></tr>
+</table>

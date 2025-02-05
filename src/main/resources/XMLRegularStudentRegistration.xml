@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="RegularStudentRegistration" preserve-order="true">
+	
+<test name="Login-As University user">
+
+		<classes>
+			<class name="com.ospyn.ktu.test.Login">
+				<methods>
+					<include name="ktu_Page_Loaded" />
+				
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_RegularStudentRegistration_02-Regular student registration from college login">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+					<include name="Login_as_College_Admin" />
+					<include name="click_Student_Module" />
+					<include name="click_Add_Registration" />
+					<include name="click_Add_Button_For_Individual_Student_Registration" />
+					<include name="submission_of_Regular_Student_Registration" />
+					<include name="logout" />
+														
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	<test name="TC_RegularStudentRegistration_03-Generating register number from university login">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+					
+					<include name="Login_as_University_User" />
+					<include name="click_Student_Module" />
+					<include name="click_Semester_Transfer_or_Registration" />
+					<include name="generating_Register_Number" />
+					
+						
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+		<test name="TC_RegularStudentRegistration_04-Changing students password">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+					
+					<include name="click_Student_Module" />
+					<include name="add_Filters_in_Student_Details_Page" />
+					<include name="storing_Student_Register_Number" />
+					<include name="user_Changing_Password" />
+					<include name="logout" />
+								
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_RegularStudentRegistration_05-Submit Student details from student login">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+									
+					<include name="student_Submitting_Registration_Details" />
+												
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_RegularStudentRegistration_06-College verifying student details">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+					<include name="Login_as_College_Admin" />
+					<include name="click_Student_Module" />				
+					<include name="college_Verifying_Student_Details" />
+					<include name="logout" />							
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_RegularStudentRegistration_07-Approving from university login">		
+		<classes>
+			<class name="com.ospyn.ktu.test.RegularStudentRegistration">
+				<methods>					
+				<include name="Login_as_University_User" />	
+				<include name="click_Student_Module" />	
+				<include name="university_Approving_Student_Details" />														
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</suite>
