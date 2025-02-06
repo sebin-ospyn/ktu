@@ -1,132 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-31T14:55:46 IST" name="Suite" finished-at="2025-01-31T14:56:10 IST" duration-ms="23504">
+  <suite started-at="2025-02-06T10:40:13 IST" name="Suite" finished-at="2025-02-06T10:40:16 IST" duration-ms="3047">
     <groups>
     </groups>
-    <test started-at="2025-01-31T14:55:46 IST" name="Fee_Waiver" finished-at="2025-01-31T14:56:10 IST" duration-ms="23504">
-      <class name="com.ospyn.ktu.test.FeeWaiver">
-        <test-method is-config="true" signature="initializeReport()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:55:46 IST" name="initializeReport" finished-at="2025-01-31T14:55:46 IST" duration-ms="58" status="PASS">
+    <test started-at="2025-02-06T10:40:13 IST" name="Test" finished-at="2025-02-06T10:40:16 IST" duration-ms="3047">
+      <class name="onlyLocal.tes">
+        <test-method signature="m2()[pri:0, instance:onlyLocal.tes@54c5a2ff]" started-at="2025-02-06T10:40:13 IST" name="m2" finished-at="2025-02-06T10:40:16 IST" duration-ms="2987" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeReport -->
-        <test-method is-config="true" signature="getTestName(org.testng.ITestContext)[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:55:46 IST" name="getTestName" finished-at="2025-01-31T14:55:46 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@3d2f3dcb]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestName -->
-        <test-method signature="loginAsKtusupport()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:55:46 IST" name="loginAsKtusupport" finished-at="2025-01-31T14:55:54 IST" duration-ms="7625" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsKtusupport -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:55:54 IST" name="getResult" finished-at="2025-01-31T14:55:54 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=loginAsKtusupport status=SUCCESS method=FeeWaiver.loginAsKtusupport()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method signature="AddFeeWaiver()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:55:54 IST" name="AddFeeWaiver" finished-at="2025-01-31T14:56:10 IST" duration-ms="15720" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/university/eu/uty/feeWaiver.htm?feeWaiverId=%2B%2Bldw0fi332sZLII2urWn8qw%2BAi5jKqHvBf434EGAMk%3D&amp;feeId=PXdmDT8r%2FiGoZ5eYLniV2IqN%2B6pEx3RzZxpOEj%2Bkwbs%3D" data-toggle="tooltip" class="btn btn-warning btn-xs" data-original-title="Edit Fee Waiver">...</a> is not clickable at point (1302, 603). Other element would receive the click: <p class="text-muted footer" align="center">...</p>
-  (Session info: chrome=127.0.6533.99)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'sebin', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-52-generic', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.99, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f53cf6b6b8b2ac84659f4ca1d583cc97]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/university/eu/uty/feeWaiver.htm?feeWaiverId=%2B%2Bldw0fi332sZLII2urWn8qw%2BAi5jKqHvBf434EGAMk%3D&amp;feeId=PXdmDT8r%2FiGoZ5eYLniV2IqN%2B6pEx3RzZxpOEj%2Bkwbs%3D" data-toggle="tooltip" class="btn btn-warning btn-xs" data-original-title="Edit Fee Waiver">...</a> is not clickable at point (1302, 603). Other element would receive the click: <p class="text-muted footer" align="center">...</p>
-  (Session info: chrome=127.0.6533.99)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'sebin', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-52-generic', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.99, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f53cf6b6b8b2ac84659f4ca1d583cc97
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-at com.ospyn.ktu.view.ViewFeeWaiver.addFeeWaiver(ViewFeeWaiver.java:191)
-at com.ospyn.ktu.test.FeeWaiver.AddFeeWaiver(FeeWaiver.java:185)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddFeeWaiver -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:56:10 IST" name="getResult" finished-at="2025-01-31T14:56:10 IST" duration-ms="127" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddFeeWaiver status=FAILURE method=FeeWaiver.AddFeeWaiver()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:com.ospyn.ktu.test.FeeWaiver@4f0f7849]" started-at="2025-01-31T14:56:10 IST" name="endTest" finished-at="2025-01-31T14:56:10 IST" duration-ms="157" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- com.ospyn.ktu.test.FeeWaiver -->
-    </test> <!-- Fee_Waiver -->
+        </test-method> <!-- m2 -->
+      </class> <!-- onlyLocal.tes -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

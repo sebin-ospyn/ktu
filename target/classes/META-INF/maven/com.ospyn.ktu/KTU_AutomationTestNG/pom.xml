@@ -41,8 +41,9 @@
           <configuration>
 			  <suiteXmlFiles>
 				 <!-- <suiteXmlFile>MvnViaCmd.xml</suiteXmlFile>-->
-				  <suiteXmlFile>XMLAdditionalFeeCollection.xml</suiteXmlFile>
+				<!--  <suiteXmlFile>XMLAdditionalFeeCollection.xml</suiteXmlFile>-->
 				 <!--  <suiteXmlFile>XMLTest1.xml</suiteXmlFile>-->
+				  <suiteXmlFile>testng.xml</suiteXmlFile>
 			  </suiteXmlFiles>       
 		  </configuration>
         </plugin>

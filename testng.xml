@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Fee_Waiver">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="com.ospyn.ktu.test.FeeWaiver">
-      <methods>
-      <include name = "loginAsKtusupport" />
-      <include name = "AddFeeWaiver" />
-      </methods>
-      </class >
+      <class name="onlyLocal.tes"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
